@@ -1,2 +1,3 @@
-# Lab3-Robotica
-Laboratorio 3 de Robotica
+# Laboratorio N° 03 - 2024-II - Robótica de Desarrollo, Intro a ROS
+
+
