@@ -1,6 +1,6 @@
 # Laboratorio N° 03 - 2024-II - Robótica de Desarrollo, Intro a ROS
 
-Integrantes: Catalina Criollo - Diego Malagón
+Integrantes: Catalina Criollo Castelblanco - Diego Fernando Malagón Saenz
 
 ## Proceso de instalación de ROS2.
 
