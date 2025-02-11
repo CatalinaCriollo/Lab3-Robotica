@@ -95,9 +95,21 @@ Para esta sección, destinada al control de la tortuga con el teclado, se había
   - Retorno al Centro: Tecla R para teletransportar la tortuga a su posición y orientación iniciales utilizando el servicio /turtle1/teleport_absolute.
   - Giro de 180 Grados: Tecla Espacio para realizar un giro de 180 grados mediante el servicio /turtle1/teleport_relative.
 
-Aunque la implementación práctica no se concretó de la manera deseada, se considera que el código desarrollado proporciona una base sólida para futuras aplicaciones en las que se requieran controlar movimientos mediante entradas del teclado en un entorno ROS 2.
+Aunque la implementación no se logro realizae de la manera deseada, se considera que el código desarrollado proporciona una base sólida para futuras aplicaciones en las que se requieran controlar movimientos mediante entradas del teclado en un entorno ROS 2.
+
+Y debido a que no se logró implementar y probar el script en Python, como alternativa, se utilizó el comando predeterminado de ROS 2 para el control manual de la tortuga:
+
+```sh
+ros2 run turtlesim turtle_teleop_key
+```
+
+Con esto se visualizo lo que se presenta en la siguiente imágen:
 
 ![](matlab2.png)
+
+Aunque esta opción permitió realizar el control manual básico, no se implementaron funciones adicionales como la teletransportación de la tortuga o el giro de 180° con la tecla espacio, que estaban planeadas para el script en Python.
+
+
 
 ## Dificultades presentadas
 * Fue necesario crear un nuevo usuario de windows con un nombre sin espacios para evitar problemas con la instalación.
