@@ -56,5 +56,37 @@ mamba install ros-humble-desktop
 
 Con esto, se completa la instalación de ROS2 en Windows 11 a través de RoboStack.
 
+## Conexión de ROS2 con Matlab
+El objetivo de esta sección fue establecer una comunicación efectiva entre MATLAB y ROS 2 para interactuar con nodos y tópicos en tiempo real. Para esto se siguio con el siguiente procedimiento:
+
+1.	Configuración del Entorno:
+  o	Se instaló y configuró ROS 2 en el sistema, asegurando su correcto funcionamiento.
+  o	Se verificó la instalación del ROS Toolbox en MATLAB, herramienta esencial para la integración con ROS 2.
+2.	Inicialización de la Conexión:
+o	En MATLAB, se creó un nodo ROS 2 utilizando el comando ros2node.
+o	Se especificó el DomainID adecuado para garantizar la comunicación con otros nodos en la misma red.
+3.	Interacción con Tópicos:
+o	Publicación: Se desarrolló un script que publica mensajes en el tópico /turtle1/cmd_vel para controlar la velocidad de la tortuga en Turtlesim.
+o	Suscripción: Se implementó otro script que se suscribe al tópico /turtle1/pose para recibir y mostrar en MATLAB la posición actual de la tortuga.
+4.	Llamada a Servicios:
+o	Se utilizó el servicio /turtle1/teleport_absolute para teletransportar la tortuga a una posición específica, demostrando la capacidad de MATLAB para interactuar con servicios ROS 2.
+Resultados:
+La conexión entre MATLAB y ROS 2 se estableció exitosamente, permitiendo el control y monitoreo de la tortuga en Turtlesim directamente desde scripts en MATLAB. Esto se evidencia en las siguientes imágenes.
+
+![](matlab1.png)
+
+![](matlab2.png)
+
+
+## Python: Control de la tortuga con el teclado
+
+
+## Dificultades presentadas
+* En repetidas ocasiones la instalación se vió interrumpida debido a problemas de conexión.
+* Las instrucciones descritas en la documentación eran para ROS, los comandos y procedimientos con ROS2 son ligeramente diferentes lo que dificulta el seguimiento de los procedimientos.
+* Durante una de las sesiones se presentó un problema con la activación del “environment” pues aparentemente no reconoció el environment, esto se soluciona reiniciando el CMD.
+* Dado que se estaba trabajando con la versión R2023b de matlab, se presentaron problemas de compatibilidad con la versión de python, se tuvo que instalar la versión 3.10 para corregir este error.
+
+
 
 
