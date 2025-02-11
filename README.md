@@ -71,15 +71,30 @@ o	Suscripción: Se implementó otro script que se suscribe al tópico /turtle1/p
 4.	Llamada a Servicios:
 o	Se utilizó el servicio /turtle1/teleport_absolute para teletransportar la tortuga a una posición específica, demostrando la capacidad de MATLAB para interactuar con servicios ROS 2.
 Resultados:
-La conexión entre MATLAB y ROS 2 se estableció exitosamente, permitiendo el control y monitoreo de la tortuga en Turtlesim directamente desde scripts en MATLAB. Esto se evidencia en las siguientes imágenes.
+La conexión entre MATLAB y ROS 2 se estableció exitosamente, permitiendo el control y monitoreo de la tortuga en Turtlesim directamente desde scripts en MATLAB. Esto se evidencia en la siguiente imágen.
 
 ![](matlab1.png)
 
-![](matlab2.png)
+
 
 
 ## Python: Control de la tortuga con el teclado
 
+Para esta sección, destinada al control de la tortuga con el teclado, se había planificado desarrollar un script en Python que permitiera la manipulación de la tortuga en Turtlesim mediante entradas del teclado. Aunque no se logró implementar esta funcionalidad durante el laboratorio, se diseñó un código que refleja la estrategia propuesta para alcanzar este objetivo.
+
+* Captura de Eventos del Teclado:
+
+  - Utilizar la biblioteca termios y tty de Python para leer las entradas del teclado sin necesidad de presionar "Enter" después de cada comando.
+* Publicación de Comandos de Velocidad:
+  - Emplear la biblioteca rclpy para interactuar con ROS 2 y publicar mensajes en el tópico /turtle1/cmd_vel, controlando así la velocidad lineal y angular de la tortuga.
+* Asignación de Teclas para Control:
+  - Movimiento Adelante y Atrás: Teclas W y S para mover la tortuga hacia adelante y atrás, respectivamente.
+  - Giro Izquierda y Derecha: Teclas A y D para girar la tortuga en sentido antihorario y horario.
+  - Retorno al Centro: Tecla R para teletransportar la tortuga a su posición y orientación iniciales utilizando el servicio /turtle1/teleport_absolute.
+  - Giro de 180 Grados: Tecla Espacio para realizar un giro de 180 grados mediante el servicio /turtle1/teleport_relative.
+
+Aunque la implementación práctica no se concretó, se considera que el código desarrollado proporciona una base sólida para futuras aplicaciones en las que se requieran controlar movimientos mediante entradas del teclado en un entorno ROS 2.
+![](matlab2.png)
 
 ## Dificultades presentadas
 * En repetidas ocasiones la instalación se vió interrumpida debido a problemas de conexión.
