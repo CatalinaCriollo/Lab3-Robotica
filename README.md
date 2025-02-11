@@ -80,7 +80,7 @@ La conexión entre MATLAB y ROS 2 se estableció exitosamente, permitiendo el co
 
 ## Python: Control de la tortuga con el teclado
 
-Para esta sección, destinada al control de la tortuga con el teclado, se había planificado desarrollar un script en Python que permitiera la manipulación de la tortuga en Turtlesim mediante entradas del teclado. Aunque no se logró implementar esta funcionalidad durante el laboratorio, se diseñó un código que refleja la estrategia propuesta para alcanzar este objetivo.
+Para esta sección, destinada al control de la tortuga con el teclado, se había planificado desarrollar un script en Python que permitiera la manipulación de la tortuga en Turtlesim mediante entradas del teclado. Aunque no se logró implementar esta funcionalidad de manera correcta durante el laboratorio, se diseñó un código que refleja la estrategia propuesta para alcanzar este objetivo. Este código esta adjunto en el repositorio y tiene el nombre (lab3robotica.py)
 
 * Captura de Eventos del Teclado:
 
@@ -97,6 +97,7 @@ Aunque la implementación práctica no se concretó, se considera que el código
 ![](matlab2.png)
 
 ## Dificultades presentadas
+* Fue necesario crear un nuevo usuario de windows con un nombre sin espacios para evitar problemas con la instalación.
 * En repetidas ocasiones la instalación se vió interrumpida debido a problemas de conexión.
 * Las instrucciones descritas en la documentación eran para ROS, los comandos y procedimientos con ROS2 son ligeramente diferentes lo que dificulta el seguimiento de los procedimientos.
 * Durante una de las sesiones se presentó un problema con la activación del “environment” pues aparentemente no reconoció el environment, esto se soluciona reiniciando el CMD.
