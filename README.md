@@ -59,19 +59,21 @@ Con esto, se completa la instalación de ROS2 en Windows 11 a través de RoboSta
 ## Conexión de ROS2 con Matlab
 El objetivo de esta sección fue establecer una comunicación efectiva entre MATLAB y ROS 2 para interactuar con nodos y tópicos en tiempo real. Para esto se siguio con el siguiente procedimiento:
 
-1.	Configuración del Entorno:
-  o	Se instaló y configuró ROS 2 en el sistema, asegurando su correcto funcionamiento.
-  o	Se verificó la instalación del ROS Toolbox en MATLAB, herramienta esencial para la integración con ROS 2.
-2.	Inicialización de la Conexión:
-o	En MATLAB, se creó un nodo ROS 2 utilizando el comando ros2node.
-o	Se especificó el DomainID adecuado para garantizar la comunicación con otros nodos en la misma red.
-3.	Interacción con Tópicos:
-o	Publicación: Se desarrolló un script que publica mensajes en el tópico /turtle1/cmd_vel para controlar la velocidad de la tortuga en Turtlesim.
-o	Suscripción: Se implementó otro script que se suscribe al tópico /turtle1/pose para recibir y mostrar en MATLAB la posición actual de la tortuga.
-4.	Llamada a Servicios:
-o	Se utilizó el servicio /turtle1/teleport_absolute para teletransportar la tortuga a una posición específica, demostrando la capacidad de MATLAB para interactuar con servicios ROS 2.
-Resultados:
-La conexión entre MATLAB y ROS 2 se estableció exitosamente, permitiendo el control y monitoreo de la tortuga en Turtlesim directamente desde scripts en MATLAB. Esto se evidencia en la siguiente imágen.
+En esta sección del laboratorio, se estableció una comunicación entre ROS 2 y MATLAB con el objetivo de controlar el movimiento de la tortuga en Turtlesim. Se realizaron tres implementaciones principales: envío de comandos de velocidad, suscripción al tópico de posición, y teletransporte de la tortuga a una nueva ubicación.
+
+1. Envío de comandos de velocidad a la tortuga
+   
+Para controlar el movimiento de la tortuga, se inició un nodo en MATLAB y se configuró un publicador en el tópico /turtle1/cmd_vel, utilizando el tipo de mensaje geometry_msgs/Twist. Se definió un mensaje con una velocidad lineal de 1.0 en el eje X y se envió al simulador.
+
+2. Suscripción al tópico de posición de la tortuga
+   
+Para monitorear la posición de la tortuga en tiempo real, se creó un nodo en MATLAB que actúa como suscriptor del tópico /turtle1/pose. A través de este nodo, se obtuvo el último mensaje de posición de la tortuga y se imprimieron sus valores en consola.
+
+3. Teletransporte de la tortuga
+   
+Para modificar la posición de la tortuga directamente, se utilizó el servicio /turtle1/teleport_absolute, que permite establecer nuevas coordenadas y orientación. Se creó un nodo en MATLAB que actuó como cliente del servicio y envió una solicitud para mover la tortuga a X = 5.0, Y = 5.0 y un ángulo de 90 grados.
+
+Al realizar lo anterior, la conexión entre MATLAB y ROS 2 se estableció exitosamente, permitiendo el control y monitoreo de la tortuga en Turtlesim directamente desde scripts en MATLAB. Esto se evidencia en la siguiente imágen.
 
 ![](matlab1.png)
 
@@ -93,7 +95,8 @@ Para esta sección, destinada al control de la tortuga con el teclado, se había
   - Retorno al Centro: Tecla R para teletransportar la tortuga a su posición y orientación iniciales utilizando el servicio /turtle1/teleport_absolute.
   - Giro de 180 Grados: Tecla Espacio para realizar un giro de 180 grados mediante el servicio /turtle1/teleport_relative.
 
-Aunque la implementación práctica no se concretó, se considera que el código desarrollado proporciona una base sólida para futuras aplicaciones en las que se requieran controlar movimientos mediante entradas del teclado en un entorno ROS 2.
+Aunque la implementación práctica no se concretó de la manera deseada, se considera que el código desarrollado proporciona una base sólida para futuras aplicaciones en las que se requieran controlar movimientos mediante entradas del teclado en un entorno ROS 2.
+
 ![](matlab2.png)
 
 ## Dificultades presentadas
